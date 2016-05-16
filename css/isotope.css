@@ -1,0 +1,124 @@
+.isotope-item{
+  z-index:2
+}
+.isotope-hidden.isotope-item{
+  pointer-events:none;
+  z-index:1
+}
+.isotope,.isotope .isotope-item{
+  -moz-transition-duration:0.8s;
+  -ms-transition-duration:0.8s;
+  -o-transition-duration:0.8s;
+  -webkit-transition-duration:0.8s;
+  transition-duration:0.8s
+}
+.isotope{
+  -moz-transition-property:height,width;
+  -ms-transition-property:height,width;
+  -o-transition-property:height,width;
+  -webkit-transition-property:height,width;
+  transition-property:height,width
+}
+.isotope .isotope-item{
+  -moz-transition-property:-moz-transform,opacity;
+  -ms-transition-property:-ms-transform,opacity;
+  -o-transition-property:-o-transform,opacity;
+  -webkit-transition-property:-webkit-transform,opacity;
+  transition-property:transform,opacity
+}
+.isotope.no-transition,.isotope.no-transition .isotope-item,.isotope .isotope-item.no-transition{
+  -moz-transition-duration:0s;
+  -ms-transition-duration:0s;
+  -o-transition-duration:0s;
+  -webkit-transition-duration:0s;
+  transition-duration:0s
+}
+.isotope.infinite-scrolling{
+  -moz-transition:none;
+  -ms-transition:none;
+  -o-transition:none;
+  -webkit-transition:none;
+  transition:none
+}
+.element{
+  display:block;
+  height:auto;
+  margin-bottom:30px;
+  overflow:hidden;
+  position:relative
+}
+.pf_img{
+  border-radius:5px 5px 0px 0px
+}
+.breadcrumb{
+  border-radius:10px
+}
+#options{
+  margin:0px auto;
+  margin-bottom:30px;
+  max-width:auto
+}
+#options h3{
+  font-size:15px;
+  margin-bottom:0.2em
+}
+#options h4{
+  font-weight:bold
+}
+#options ul{
+  list-style:none;
+  margin:0 auto;
+  text-align:center
+}
+#options li{
+  display:inline-block;
+  margin-right:10px;
+  margin-bottom:5px;
+
+}
+#options li button{
+  border-radius:5px;
+  display:block;
+  line-height:24px;
+  outline:none;
+  padding:5px 10px;
+    min-width:50px;  
+}
+#options li button:hover{
+  background:url(../images/content_bg.png);
+  color:#000;
+  text-decoration:none;
+  text-shadow:none
+}
+#options li button:active{
+  background:#39D
+}
+#options li button.active{
+  background:url(../images/content_bg.png);
+  color:#fff !important;
+  position:relative;
+  text-shadow:none
+}
+#options li button.active:after{
+  border-bottom:7px solid #f1f1f1;
+  border-left:7px solid transparent;
+  border-right:7px solid transparent;
+  bottom:0px;
+  content:"";
+  display:block;
+  left:50%;
+  margin-left:-7px;
+  margin-top:5px;
+  position:absolute;
+  width:0
+}
+.clearfix:before,.clearfix:after{
+  content:"";
+  display:table
+}
+.clearfix:after{
+  clear:both
+}
+.clearfix{
+  zoom:1
+}

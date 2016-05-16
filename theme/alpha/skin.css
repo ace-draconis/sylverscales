@@ -1,0 +1,240 @@
+.border{
+  background:url(images/top2.png) no-repeat center top transparent;
+  display:block;
+  height:30px;
+  margin-bottom:80px;
+  margin-top:-100px;
+  width:100%
+}
+.odd .border{
+  background:url(images/top.png) no-repeat center top transparent
+}
+.page{
+  background:url(images/background2.png) repeat #efefef;
+}
+.odd .team-wrapper,.odd .content {
+  background: #111;
+  border:2px solid #333;
+}
+.odd .content ul li{
+  color:#fff
+}
+.odd .progress{
+  border:1px solid #444;
+}
+.odd .strip,.strip{
+  background:#aaa !important
+}
+a.zoom,.serv_icon{
+  background:#666
+}
+.content img{
+  height:auto;
+  width:auto
+}
+a.zoom img{
+  border:0px;
+  width:20px !important
+}
+.odd {
+    background:url(images/background.png) repeat #efefef;
+      color:#ddd;
+}
+#filters a.selected,#filters a:hover,#options li button{
+  background:#aaa
+}
+.team-wrapper,.content{
+  background: #eee;
+  border: 2px solid #ccc;
+}
+.team-wrapper .rounded-image:hover span,.odd .team-wrapper .rounded-image:hover span{
+  border:6px solid #b5f801
+}
+.content p,.cont,.odd .sub_header h2,.odd label,.team-wrapper p{
+  color:#444
+}
+.odd .content p,.odd .cont,.odd .content,.odd .team-wrapper p{
+  color: #fff !important
+}
+.page h1,.page h2,.page h3,.page h4,.page h5,.page h6{
+  color:#888;
+  font-weight:normal !important;
+  text-shadow:1px 1px 1px rgba(255,255,255,0.9)
+}
+.odd h1,.odd h2,.odd h3,.odd h4,.odd h5,.odd h6,.content h4{
+  color:#666;
+  font-weight:normal !important;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.9)
+}
+.content h5{
+  color:#888;
+  text-shadow:none
+}
+.odd .content h5{
+  color:#666
+}
+.content span,.cont span{
+  color:#aaa;
+  font-size:1em;
+  font-weight:bold;
+  text-shadow:none
+}
+.odd .content span,.odd .cont span{
+  color:#666
+}
+.content h4{
+  text-shadow:none
+}
+.page h3.title,.page h4.title{
+  background:url(images/divider8.png) no-repeat left bottom;
+  margin-bottom:15px;
+  padding:5px 0px 30px;
+  width:100%
+}
+.odd h3.title,.odd h4.title{
+  background:url(images/divider7.png) no-repeat left bottom
+}
+.sub_header{
+  background:url(images/divider10.png) no-repeat center bottom
+}
+.odd .sub_header{
+  background:url(images/divider11.png) no-repeat center bottom
+}
+blockquote{
+  background: url("images/divider1.png") repeat-y !important;
+  display:block;
+  font-style:italic;
+  margin:0 0 20px;
+  padding:0 0 0 15px;
+  text-align:justify
+}
+.odd blockquote{
+  background: url("images/divider2.png") repeat-y !important;
+  color:#fff !important
+}
+.vaidate_error{
+  border:1px solid #bab932 !important
+}
+.sub_header h2{
+  color:#aaa;
+  text-shadow:2px 2px 2px rgba(0,0,0,0.5)
+}
+.services:hover .serv_icon{
+  background:#aaa !important
+}
+.odd .services:hover .serv_icon{
+  background:#444 !important
+}
+.odd .serv_icon{
+  border: 1px solid #333;
+}
+
+.breadcrumb{
+  border: groove 2px #222 !important
+}
+
+th,.odd th{
+  background:#999
+}
+.team-wrapper h4{
+  color:#888;
+
+}
+label,.odd .team-wrapper h4{
+  color:#333;
+  text-shadow:none
+}
+label span,.team-wrapper h5{
+  color:#aaa;
+  display:inline;
+
+}
+.odd label span,.odd .team-wrapper h5{
+  color:#888;
+  display:inline;
+  text-shadow:none
+}
+label span{
+  color:#666;
+  display:inline
+}
+footer a{
+  color:#666
+}
+footer.odd{
+  background:#222 !important;
+  border-top:1px solid #444 !important;
+  color: #ddd !important;
+}
+
+#options li button:hover {
+  color:#fff;
+  background: #888;
+  text-decoration:none
+}
+.odd #options li button:hover {
+  color:#fff;
+  background: #222;
+  text-decoration:none
+}
+.odd #options li button{
+     background: #666;
+}
+.odd #options li button.active {
+  color:#fff;
+  background: #333;
+  text-decoration:none
+}
+#options li button.active:after {
+border-bottom: 7px solid #eee;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;}
+.odd #options li button.active:after {
+border-bottom: 7px solid #111;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;}
+#filter .portfolio_img img {
+border: 2px solid #333;}
+footer a:hover{
+   color:#222;
+   background: none;
+}
+#options li button.active{
+  background: #666;
+
+}
+
+.icn{width:40px;height:40px;}
+.icn{
+  -webkit-filter:grayscale(0.7);
+  filter:grayscale(70%);
+  transform:rotate(-15deg)
+}
+.icn:hover{
+  -webkit-filter:grayscale(0);
+  filter:grayscale(0%);
+  transform:rotate(0deg);
+  transition:transform 300ms ease 0s
+}
+a{
+  color:#aaa
+}
+.odd a{
+  color:#666
+}
+a:hover{
+  color:#666;
+  text-decoration:none
+}
+.breadcrumb{
+     background:#eee;
+     border:2px solid #ccc !important;
+}
+.odd .breadcrumb{
+     background:#111;
+     border:2px solid #333 !important;
+}
+textarea, input[type="text"],input[type="email"]{
+  background: #eee;
+   border:2px solid #ccc !important;
+}

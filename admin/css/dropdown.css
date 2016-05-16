@@ -1,0 +1,125 @@
+* li{
+  font-size:11px
+}
+li.add{
+  float:left !important;
+  width:24px
+}
+li.active{
+  border-bottom: #888 2px solid !important
+}
+li.active a{
+  margin-bottom:1px
+}
+ul.dropdown,ul.dropdown li,ul.dropdown ul,ul.dropdown #contentsub ol{
+  list-style:none;
+  margin:0;
+  padding:0
+}
+ul.dropdown{
+  display:inline;
+  float:left;
+  position:relative;
+  z-index:597
+}
+ul.dropdown li{
+  float:left;
+  line-height:38px;
+  padding:0px 9px;
+  vertical-align:middle
+}
+ul.dropdown li.hover,ul.dropdown li:hover{
+  cursor:default;
+  position:relative;
+  z-index:599
+}
+ul.dropdown ul,ul.dropdown #contentsub ol,ul.dropdown #contentsub ol ul{
+  position:absolute;
+  right:0;
+  top:100%;
+  visibility:hidden;
+  width:100%;
+  z-index:598
+}
+ul.dropdown ul li,ul.dropdown #contentsub ol li{
+  float:none
+}
+ul.dropdown ul ul,ul.dropdown #contentsub ol ul,ul.dropdown #contentsub ol #contentbelow ul{
+  left:99%;
+  top:1px
+}
+ul.dropdown li:hover>ul,ul.dropdown li:hover>#contentsub ol{
+  visibility:visible
+}
+#contentsub ol li:hover>ul,#contentsub ol li:hover>#contentbelow ul{
+  visibility:visible
+}
+#contentLeft{
+  background:#eee;
+  border:2px solid #ccc;
+  border-radius:10px;
+  display:inline-block;
+  height:38px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:-30px;
+  max-width:1000px;
+  padding:0px 15px;
+  position:relative;
+  z-index:10
+}
+ul.dropdown{
+  font-weight:bold
+}
+ul.dropdown *.dir{
+  background:url(images/nav-arrow-down.png) no-repeat 100% 50%;
+  padding-right:20px
+}
+ul.dropdown a:active{
+  color:#ffa500
+}
+ul.dropdown a:link,ul.dropdown a:visited{
+  color:#aaa;
+  text-decoration:none
+}
+ul.dropdown li{
+  background:#eee;
+  border-left:1px solid #ddd!important;
+  border-right:1px solid #ccc!important;
+  color:#aaa;
+  margin-right:0px
+}
+ul.dropdown li a:hover{
+  color:#666
+}
+ul.dropdown li.hover,ul.dropdown li:hover{
+  background:#eee;
+  color:#666
+}
+ul.dropdown ul{
+  border-top:1px solid #bbb!important;
+  margin-top:0px;
+  width:150px
+}
+ul.dropdown ul li{
+  border-bottom:1px solid #ccc!important;
+  border-left:1px solid #bbb!important;
+  border-top:1px solid #ddd!important;
+  color:#888;
+  font-weight:normal
+}
+ul.dropdown-horizontal ul *.dir{
+  background:url(images/nav-arrow-right.png) no-repeat 100% 50%;
+  padding-right:15px
+}
+ul.dropdown-upward *.dir{
+  background:url(images/nav-arrow-top.png)
+}
+ul.dropdown-vertical *.dir,ul.dropdown-upward ul *.dir{
+  background:url(images/nav-arrow-right.png)
+}
+ul.dropdown-vertical-rtl *.dir{
+  background:url(images/nav-arrow-left.png) 0 50%;
+  padding-left:15px;
+  padding-right:10px
+}

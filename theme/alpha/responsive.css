@@ -1,0 +1,347 @@
+@charset "utf-8";
+@media (min-width: 768px) and (max-width: 1024px){
+
+  #tabby{
+    display: none;
+  }
+
+  img.logo{
+    margin-top:40px
+  }
+  h3,h4{
+    font-size:1.3em;
+    line-height:1em
+  }
+  #main-nav ul li a{
+    font-size:0.8em;
+    padding:0px 5px
+  }
+  div.cont,div.cont p{
+    font-size:1.2em;
+    line-height:1.5em
+  }
+  .icn{
+    height:30px;
+    width:30px
+  }
+  .team-wrapper{
+    height:auto
+  }
+  .team-wrapper h4{
+    font-size:1.3em;
+    line-height:1em
+  }
+  .team-wrapper h5.title,.services h5,.content h5{
+    font-size:1em;
+    line-height:1em
+  }
+  .content{
+    padding:5px 15px
+  }
+  .span3 .content h5{
+    font-size:0.8em
+  }
+  .team-wrapper .cont,.content ul li,.content p{
+    font-size:0.7em;
+    height:auto;
+    line-height:1.5em
+  }
+  .rounded-image{
+    max-height:136px;
+    max-width:136px
+  }
+  .team-wrapper .rounded-image img{
+    border-radius:136px;
+    max-height:136px;
+    max-width:136px
+  }
+  .team-wrapper .rounded-image span{
+    border-radius:136px;
+    height:136px;
+    width:136px
+  }
+  .hi-icon{
+    height:40px;
+    width:40px
+  }
+  .services .serv_icon img{
+    height:25px;
+    margin-top:8px;
+    width:25px
+  }
+  .progress{
+    margin-bottom:10px
+  }
+  .rounded-icon span{
+    border-radius:88px;
+    height:88px;
+    max-height:88px;
+    max-width:88px;
+    width:88px
+  }
+  .rounded-icon span.write-icon{
+    background:-15px -15px
+  }
+  .rounded-icon span.clock-icon{
+    background:-133px -15px
+  }
+  .rounded-icon span.pen-icon{
+    background:-251px -15px
+  }
+  .rounded-icon span.mail-icon{
+    background:-369px -15px
+  }
+  .work-flow{
+    background:135px 46px
+  }
+  .testimonial-carousel ul#testimonial-carousel li{
+    margin-right:14px;
+    width:366px
+  }
+  .testimonial-content-wrapper{
+    margin-left:5px;
+    padding-left:26px;
+    width:59%
+  }
+  .blog-carousel ul#blog-carousel li{
+    margin-right:14px;
+    width:360px
+  }
+  .blog-entry .entry-details{
+    width:52%
+  }
+  .blog-entry .entry-metadata .author,.blog-entry .entry-metadata .tags a{
+    margin-bottom:5px
+  }
+  .blog-entry .entry-title h5{
+    font-size:19px
+  }
+  .newsletter-form input[type="email"]{
+    width:52%
+  }
+  .dark-box{
+    width:100%
+  }
+  #primary{
+    margin-right:28px;
+    width:540px
+  }
+  #secondary{
+    width:180px
+  }
+  .widget.widget_recent_entries .entry-metadata{
+    width:95%
+  }
+  .widget input[type="email"]{
+    width:87.5%
+  }
+  ::-webkit-scrollbar{
+    width:5px
+  }
+}
+@media (min-width: 361px) and (max-width: 767px){
+  .sub_header h2{
+    font-size:3.2em;
+    line-height:1.7em;
+  }
+  .sub_header h5,.team-wrapper h5{
+    font-size:1.2em;
+    line-height:1.2em;
+    margin-bottom:10px
+  }
+  h3.title,.team-wrapper h4,.content h5{
+    font-size:2.5em;
+    line-height:1em
+  }
+  .team-wrapper .cont,.content p,.content ul{
+    font-size:1.2em;
+    height:auto;
+    line-height:1.5em
+  }
+  .icn{
+    height:60px;
+    width:60px
+  }
+
+}
+@media (max-width: 360px){
+  .icn{
+    height:35px;
+    width:35px
+  }
+  .sub_header h2{
+    font-size:2.5em
+  }
+  .sub_header h5,.team-wrapper h5{
+    font-size:1.2em;
+    line-height:1.2em;
+    margin-bottom:10px
+  }
+  h3.title,.team-wrapper h4{
+    font-size:1.8em
+  }
+}
+@media (max-width: 767px){
+  .carousel-control{
+  display:none;
+
+  }
+   .carousel-caption{
+     padding:5px;
+   }
+
+  #three,#four{
+    visibility:hidden;
+    width:0
+  }
+  #options{
+    width:95%
+  }
+  #options li{
+    margin-right:5px
+  }
+  #options li button{
+    padding:5px
+  }
+  .breadcrumb{  }
+  ::-webkit-scrollbar{
+    width:5px
+  }
+  section.page{
+    padding-top:50px
+  }
+  .mobile-menu{
+    display:block
+  }
+  #main-nav ul{
+    display:none
+  }
+  .container{
+    width:90%
+  }
+  .main-title h1,.main-title h2,.sub-title h1,.sub-title h2{
+    font-size:1.5em
+  }
+  .main-title h6,.sub-title h6{
+    font-size:1em
+  }
+  h3,h4{
+    font-size:1.3em;
+    line-height:1em
+  }
+  .services,.element{
+    margin-bottom:15px
+  }
+  .progress{
+    margin-bottom:10px
+  }
+  .column{
+    margin-right:0px
+  }
+  .one-fourth,.one-half,.three-fourth,.one-third,.two-third,.one-fifth,.four-fifth,.three-fifth,.two-fifth,.one-sixth,.two-sixth,.three-sixth,.four-sixth,.five-sixth{
+    margin-bottom:20px;
+    width:100%
+  }
+  #header{
+    height:105px;
+    padding-bottom:15px
+  }
+  #main-nav{
+    clear:both;
+    width:100%
+  }
+  #primary{
+    margin-right:0px;
+    width:100%
+  }
+  #secondary{
+    margin-top:30px;
+    width:100%
+  }
+  .content .container{
+    margin-top:90px
+  }
+  .content .pattern{
+    padding-top:0px
+  }
+  #home.content .container{
+    margin-top:0px
+  }
+  #home.content{
+    padding-top:70px
+  }
+  .work-flow{
+    background:none;
+    padding-right:0px
+  }
+  .bordered-box-content span.border{
+    width:91%
+  }
+  .portfolio{
+    margin:20px 0px;
+    width:100%
+  }
+  .portfolio .portfolio-image{
+    display:inline-block
+  }
+  .copyright{
+    text-align:center;
+    width:100%
+  }
+  #footer .social-share{
+    clear:both;
+    margin:10px 0px 0px;
+    text-align:center;
+    width:100%
+  }
+  .widget input[type="email"]{
+    width:89%
+  }
+  .single-entry{
+    width:89.2%
+  }
+  .single-entry .entry-thumb,.entry-metadata{
+    margin-right:0px;
+    width:100%
+  }
+  .single-entry .social-share{
+    margin-top:20px;
+    position:inherit
+  }
+  #respond textarea,#respond input[type="text"],#respond input[type="email"]{
+    width:89%
+  }
+  ul.commentlist li .comment-author img{
+    border-radius:58px;
+    max-height:58px;
+    max-width:58px
+  }
+  ul.commentlist li .comment-author img{
+    border-radius:38px;
+    max-height:38px;
+    max-width:38px
+  }
+  ul.commentlist li{
+    padding-left:50px
+  }
+  ul.commentlist li .comment-body{
+    padding-left:15px
+  }
+  ul.commentlist li .comment-content{
+    padding:10px 8px
+  }
+  .pricing-table.no-space .one-fourth{
+    width:100%
+  }
+  ul.tabs-frame li a{
+    font-size:11px;
+    line-height:35px;
+    padding:0px 10px
+  }
+  .dark-box{
+    width:100%
+  }
+  input[type="text"],input[type="email"],input[type="password"],input.text,textarea,.newsletter-form input[type="email"]{
+    width:95%
+  }
+}

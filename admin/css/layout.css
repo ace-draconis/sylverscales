@@ -1,0 +1,316 @@
+/*
+-----------------------------------------------
+Grey Box Method - Layout CSS
+----------------------------------------------- */html,body{
+  height:100%
+}
+*{
+  margin:0;
+  padding:0
+}
+#wrap{
+  min-height:100%
+}
+#main{
+  overflow:hidden;
+  padding-bottom:0px
+}/* must be same height as the footer */
+header{
+  background:url(../images/Bg.png) repeat-x #eee;
+  border-bottom:2px solid #ccc;
+  height:100px;
+  width:100%
+}
+footer{
+  background:url(../images/menubg.png) #eee bottom repeat-x;
+  border-top:2px solid #ccc;
+  bottom:0px;
+  clear:both;
+  color:#888;
+  display:block;
+  height:25px;
+  margin-top:-40px;/* negative value of footer height */
+  padding:5px 10px;
+  position:fixed;
+  text-align:left;
+  width:100%
+}
+/*Opera Fix*/
+body:before{/* thanks to Maleika (Kohoutec)*/
+  content:"";
+  float:left;
+  height:100%;
+  margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+  width:0
+}
+body{
+  background:url(../images/subtle_dots.png) #fff;
+  color:#333;
+  padding:0 0 0px
+}
+/* anchors
+----------------------------------------------- */
+a,.box a,.box2 a{
+  color:#aaa;
+  font-weight:bold;
+  text-decoration:none
+}
+a:hover{
+  color:#A864B7
+}
+/* 960 grid system container background
+----------------------------------------------- */
+.container_12,.container_16{
+  background:;
+}
+/* headings
+----------------------------------------------- */
+.header{
+  border-bottom:2px solid #99CC00;
+  height:35px;
+  text-align:left
+}
+/* boxes
+----------------------------------------------- */
+.box{
+  border:1px solid #bbb;
+  border-collapse:separate;
+
+}
+.box th{
+  background:#ddd;
+  border-bottom:2px solid #bbb;
+  color:#888;
+  text-shadow:1px 1px 1px #fff;
+  font-weight:bold;
+  padding:5px 10px !important;
+  text-align:left;
+  text-transform:uppercase;
+  overflow: hidden !important;
+}
+
+.box td{
+  border-bottom:solid 1px #ccc !important;
+  border-top:solid 1px #fff;
+  color:#888;
+  padding:5px 10px !important
+}
+
+
+#a{
+  color:#666;
+  font-size:10px;
+  line-height:20px;
+  text-transform:uppercase
+}
+/* table
+----------------------------------------------- */
+th,td{
+  padding:.2em 1em;
+  text-align:left;
+  vertical-align:top
+}
+thead th{
+  background:#999;
+  border-bottom:2px solid #888;
+  padding:.4em 1em .2em;
+  vertical-align:middle
+}
+thead tr{
+  background:#ccc;
+}
+thead td{
+  border-bottom: solid 1px #aaa !important;
+  line-height:12px !important;
+}
+tbody th,tbody td{
+  background:#eee;
+  vertical-align:middle
+}
+tbody tr.odd th,li.odd,div.odd,tbody tr.odd td{
+  background:#ddd
+}
+tfoot th,tfoot td{
+  background:#bbb;
+  border-top:1px solid #eee !important
+}
+tfoot tr.total th,tfoot tr.total td{
+  border-top:3px double #666
+}
+tfoot tr.total th{
+  text-transform:uppercase
+}
+th.currency,td.currency{
+  text-align:right
+}
+table.box tr:last-child td{
+  border-bottom:0px
+}
+.block{
+  padding-top:10px
+}
+div.menu{
+  padding:0
+}
+div.menu h2{
+  margin:0
+}
+div.menu .block{
+  padding-top:0
+}
+/* forms
+----------------------------------------------- */
+form{
+  overflow:hidden
+}
+fieldset{
+  background:#fff;
+  border:1px solid #aaa;
+  border-radius:5px;
+  padding:10px;
+  position:relative
+}
+legend{
+  background:#ccc;
+  border:1px solid #aaa;
+  border-radius:5px;
+  font-size:10px;
+  padding:5px 10px;
+  text-transform:uppercase;
+
+  color: #fff;
+}
+/* AJAX sliding shelf
+----------------------------------------------- */
+#loading{
+  float:right;
+  margin-right:14px;
+  margin-top:-2px
+}
+.block{
+  padding-bottom:1px
+}
+#filter{
+  background:#eee;
+  border:2px solid #ccc;
+  border-radius:10px;
+  max-width:770px;
+  min-width:500px
+}
+#filter td{
+  padding:0px
+}
+#filter li{
+  border-bottom:0px
+}
+div.field select,input.field,input.field2,textarea.textarea-field,textarea.textarea-field2{
+  -moz-border-radius:4px;
+  -o-border-radius:4px;
+  -webkit-border-radius:4px;
+  background:#fff;
+  border:1px solid #aaa;
+  border-radius:4px;
+  color:#888;
+  font-size:12px;
+  padding:6px
+}
+div.field select{
+  -webkit-appearance:none;
+  background:url(../images/down.png) no-repeat right #fff !important;
+  padding-right:32px
+}
+div.field option{
+  background:#eee;
+  line-height:20px;
+  padding:6px
+}
+input.field{
+  width:310px
+}
+input.field2{
+  width:230px
+}
+textarea.textarea-field{
+  height:60px;
+  width:310px
+}
+textarea.textarea-field2{
+  height:80px;
+  width:230px
+}
+.wrapper{
+  min-height:450px;
+  padding-bottom:30px
+}
+div.noty{
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  background:#eee;
+  border:solid 1px #bbb;
+  border-radius:5px;
+  left:50%;
+  line-height:20px;
+  margin-left:-110px;
+  margin-top:-110px;
+  padding:5px;
+  position:absolute;
+  text-align:left;
+  top:50%;
+  width:220px
+}
+.noty h4,.title h4{
+  border-bottom:3px groove #fff;
+  color:#888;
+  display:block;
+  font-size:14px;
+  line-height:30px;
+  position:absolute;
+  text-align:left;
+  text-transform:uppercase;
+  top:0px;
+  width:95%
+}
+.noty p{
+  color:#777;
+  font-size:10px;
+  letter-spacing:1px;
+  margin:10px 0px;
+  text-transform:uppercase
+}
+.noty h5{
+  color:#999;
+  font-size:12px;
+  margin:5px;
+  text-transform:uppercase
+}
+#circle{
+  border-radius:3px;
+  display:block-inline;
+  height:28px;
+  margin:5px;
+  vertical-align:middle;
+  width:6px
+}
+::-webkit-scrollbar{
+  background:#ddd;
+  height:10px;
+  width:5px
+}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment{
+  display:block;
+  height:10px
+}
+::-webkit-scrollbar-track-piece{
+  -webkit-border-radius:5px;
+  background:transparent
+}
+::-webkit-scrollbar-thumb:vertical{
+  -webkit-border-radius:5px;
+  background:#888;
+  height:50px
+}
+::-webkit-scrollbar-thumb:horizontal{
+  -webkit-border-radius:5px;
+  background:#888;
+  width:50px
+}
