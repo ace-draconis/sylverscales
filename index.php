@@ -1,4 +1,12 @@
-<?php require("admin/db/connect.php");
+<?php
+$filename = 'admin/db/connect.php';
+if (file_exists($filename)) {
+require("admin/db/connect.php");
+}
+else{
+echo'<script>self.location="admin/install.php";</script>' ;
+}
+
 if(isset($_GET['id'])) {$ref=$_GET['id'];}
 else{$ref=1;}
 if(isset($_GET['mode'])) {$mode=$_GET['mode'];$ref=0;}
