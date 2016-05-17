@@ -9,47 +9,11 @@ case 'POST': $step = &$_POST['step']; break;
 
 default:
 }
-include ('head.php');
-echo '
-<body>
-<header>
-  <div class="container_16" id="wrap"><div id="main"><center>
-    <div class="grid_16" style="height:70px;padding-top:5px;">
-    <div class="grid_3 ">
-            <img src="../attached/image/content/20150725145733_66769.png" border="0" height="60px" align="left" style="margin-top:0px;">
-        </div>
-    </div>
-    </div>
-    </div>
-
-</header>
-<div id="mask" class="list-wrap">
-<div class="container_16" id="viewcont" >';
-if($step==1){
-    $db_host=$_POST['db_host'];
-    $db_name=$_POST['db_name'];
-    $db_user=$_POST['db_user'];
-    $db_pass=$_POST['db_pass'];
-
-    if(!$db_host){$error[0]='host missing';}
-    if(!$db_name){$error[1]='database name missing';}
-    if(!$db_user){$error[2]='username missing';}
-
-$link = mysqli_connect($db_host, $db_user, $db_pass);
-if (!$link) {
-    $error[3] = 'Connection failed';
-}
-if($error){
-    $_SESSION['ERROR'] = $error;
-    echo'<script>self.location="install.php";</script>' ;
-}
-else{
-    $query = "CREATE DATABASE $db_name";
-     if (mysqli_query($link, $query)) {
-
-            //Deploy database
+//Deploy database
+function deploy($db_host, $db_user, $db_pass, $db_name){
+            $link = mysqli_connect($db_host, $db_user, $db_pass);
             // Name of the file
-            $filename = 'db/sylverscales2.sql';
+            $filename = 'db/sylverscales.sql';
             mysqli_select_db($link, $db_name) or die('Error selecting MySQL database: ' . mysqli_error($link));
             // Temporary variable, used to store current query
             $templine = '';
@@ -89,13 +53,60 @@ else{
             echo'<script>
             self.location="install.php?step=2";
             </script>' ;
+}
 
+include ('head.php');
+echo '
+<body>
+<header>
+  <div class="container_16" id="wrap"><div id="main"><center>
+    <div class="grid_16" style="height:70px;padding-top:5px;">
+    <div class="grid_3 ">
+            <img src="../attached/image/content/20150725145733_66769.png" border="0" height="60px" align="left" style="margin-top:0px;">
+        </div>
+    </div>
+    </div>
+    </div>
+
+</header>
+<div id="mask" class="list-wrap">
+<div class="container_16" id="viewcont" >';
+if($step==1){
+    $db_host=$_POST['db_host'];
+    $db_name=$_POST['db_name'];
+    $db_user=$_POST['db_user'];
+    $db_pass=$_POST['db_pass'];
+
+    if(!$db_host){$error[0]='host missing';}
+    if(!$db_name){$error[1]='database name missing';}
+    if(!$db_user){$error[2]='username missing';}
+
+$link = mysqli_connect($db_host, $db_user, $db_pass);
+if (!$link) {
+    $error[3] = 'Connection failed';
+}
+if($error){
+    $_SESSION['ERROR'] = $error;
+    echo'<script>self.location="install.php";</script>' ;
+}
+else{
+
+    $query = "CREATE DATABASE $db_name";
+    if (mysqli_query($link, $query)) {
+        deploy($db_host, $db_user, $db_pass, $db_name);
     } else {
-         $error[3] = mysqli_error($link);
-         $_SESSION['ERROR']=$error;
-         echo'<script>
-        self.location="install.php";
-        </script>' ;
+        $query="SELECT COUNT (DISTINCT 'table_name') FROM 'information_schema'.'columns' WHERE table_type = 'BASE TABLE' AND 'table_schema' = '".$db_name."'";
+        $result = mysql_query($query, $link);
+        if($result==0){
+        deploy($db_host, $db_user, $db_pass, $db_name);
+        }
+        else{
+            $error[3] = mysqli_error($link);
+            $_SESSION['ERROR']=$error;
+            echo'<script>
+            self.location="install.php";
+            </script>' ;
+        }
     }
 }
 
