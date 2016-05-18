@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sylver Hyve CMS</title>
+    <title>Sylver Scales CMS</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />

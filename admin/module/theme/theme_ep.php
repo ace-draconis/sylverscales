@@ -4,8 +4,6 @@ include ("../../functions.php");
 $rev = $_POST['ref'];
 $act = $_POST['act'];
 $theme = $_POST['name'];
-$vary = $_POST['vary'];
-$mode = $_POST['mode'];
 $id = $_POST['id'];
 if ($_SESSION['SESS_MEMBER_ID'] == '') {
     header('refresh: 0; url=../../noty.php?mode=error');
@@ -29,7 +27,12 @@ else {
         else {
             echo "There was an error uploading the file, please try again!";
         }
-        $query = sprintf("INSERT INTO theme (name, theme, vary) VALUES (%s, %s, %s)",GetSQLValueString($con,$theme,"text"),GetSQLValueString($con,$name[0],"text"),GetSQLValueString($con,'default',"text"));
+        $query = sprintf("INSERT INTO theme (name, enable, theme, vary, mode) VALUES (%s, %s, %s, %s, %s)",
+                GetSQLValueString($con, $theme, "text"),
+                GetSQLValueString($con, 0,"int"),
+                GetSQLValueString($con, $name[0], "text"),
+                GetSQLValueString($con, 'default', "text"),
+                GetSQLValueString($con, 'single', "text"));
     }
     elseif ($act == 'update') {
         $query = sprintf("UPDATE theme SET vary=%s, mode=%s WHERE id=%s",GetSQLValueString($con,$vary,"text"),GetSQLValueString($con,$mode,"text"),GetSQLValueString($con,$id,"int"));

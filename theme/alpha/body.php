@@ -3,13 +3,13 @@
 <!-- **CSS - stylesheets** -->
 <link rel="stylesheet" type="text/css" href="theme/alpha/css/menu.css" />
 <link rel="stylesheet" type="text/css" href="theme/alpha/css/component.css" />
- <link id="default-css"  href="theme/alpha/style.css" rel="stylesheet"  />
+<link id="default-css"  href="theme/alpha/style.css" rel="stylesheet"  />
 
 <link  href="theme/alpha/css/portfolio.css" rel="stylesheet" type="text/css"/>
 
- <link href="theme/alpha/skin.css" rel="stylesheet" type="text/css"/>
- <link id="responsive-css" href="theme/alpha/responsive.css" rel="stylesheet"  type="text/css"/>
- <style>
+<link href="theme/alpha/skin.css" rel="stylesheet" type="text/css"/>
+<link id="responsive-css" href="theme/alpha/responsive.css" rel="stylesheet"  type="text/css"/>
+<style>
  section,header{
 
  }

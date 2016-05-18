@@ -139,7 +139,7 @@ echo'<div id="mask" class="list-wrap">
                                  }
                         echo'</form></td>
                         <td><center>
-                    <a href="user.php?mode=modify&ref='.$id.'" class="awesome icon magenta"><img src="images/edit.png" width="16" rel="tipsy" title="Modify"></a>';
+                    <a href="user.php?mode=modify&ref='.$id.'" class="awesome icon yellow"><img src="images/edit.png" width="16" rel="tipsy" title="Modify"></a>';
                             if($post!=1||($post==1&&$num_rows>1)){
                     echo'<img src="images/sepa.png" width="11" height="17" alt="">
                     <a href="user_ep.php?id='.$id.'&act=delete" onclick="return confirm(\'Are you sure you want to Delete this User?\');"  class="awesome icon red"><img src="images/trash.png" width="16" rel="tipsy" title="Delete"></a>';
