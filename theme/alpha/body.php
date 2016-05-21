@@ -119,7 +119,7 @@
                     </div>
                   </div>';
           //slider starts-----------------------------------------------------
-          $query3 = "SELECT enable FROM module WHERE id='1'";
+          $query3 = "SELECT enable FROM module WHERE id='2'";
           $result3 = mysqli_query($con,$query3);
           $row3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
           $enable3 = $row3['enable'];

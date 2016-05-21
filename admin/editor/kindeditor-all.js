@@ -216,7 +216,7 @@ var _INLINE_TAG_MAP = _toMap('a,abbr,acronym,b,basefont,bdo,big,br,button,cite,c
 	_PRE_TAG_MAP = _toMap('pre,style,script'),
 	_NOSPLIT_TAG_MAP = _toMap('html,head,body,td,tr,table,ol,ul,li'),
 	_AUTOCLOSE_TAG_MAP = _toMap('colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr'),
-	_FILL_ATTR_MAP = _toMap('checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected'),
+	_FILL_ATTR_MAP = _toMap('checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected,allowfullscreen,webkitallowfullscreen'),
 	_VALUE_TAG_MAP = _toMap('input,button,textarea,select');
 
 
@@ -323,7 +323,7 @@ K.options = {
 		pre : ['id', 'class'],
 		hr : ['id', 'class', '.page-break-after'],
 		'br,tbody,tr,strong,b,sub,sup,em,i,u,strike,s,del' : ['id', 'class'],
-		iframe : ['id', 'class', 'src', 'frameborder', 'width', 'height', '.width', '.height']
+		iframe : ['id', 'class', 'src', 'frameborder', 'width', 'height', '.width', '.height', 'allowfullscreen','webkitallowfullscreen' ]
 	},
 	layout : '<div class="container"><div class="toolbar"></div><div class="edit"></div><div class="statusbar"></div></div>'
 };

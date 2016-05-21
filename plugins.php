@@ -89,7 +89,7 @@
 
     <!-- Gmap3 Plugin Start-->
     <script type="text/javascript" src="js/gmap3.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCNd0Q-M55ODrwTXsZ4Mx8NXdrdX2SVC1o"></script>
     <style>
     #map{
         margin: 20px auto;
