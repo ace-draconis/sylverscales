@@ -3,7 +3,6 @@ if($mode == 'add') {
   echo'<form enctype="multipart/form-data" method="POST" action="module/theme/theme_ep.php">
                     <input type="hidden" name="act" value="insert">
                     <input type="hidden" name="ref" value="'.$ref.'">
-                           <tr><td id="a">Name<br><input type="text" name="name" class="field2" /></td></tr>
                            <tr><td id="a">Theme (.zip)<br><input type="file" name="uploadedfile" /></td></tr>
                    <tfoot>  <tr><td colspan=2><input class="awesome small green" type="submit" value="Upload" style="float:right;"></td></tr> </tfoot>
                     </form>';
@@ -15,8 +14,8 @@ else {
   $count_1 = mysqli_num_rows($result_1);
   while ($row_1 = mysqli_fetch_array($result_1,MYSQLI_ASSOC)) {
     $id_1 = $row_1['id'];
-    $name_1 = $row_1['name'];
     $theme_1 = $row_1['theme'];
+    $name_1 = ucfirst($theme_1);
     $vary_1 = $row_1['vary'];
     $mode_1 = $row_1['mode'];
     $enable_1 = $row_1['enable'];

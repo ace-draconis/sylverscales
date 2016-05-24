@@ -1,7 +1,5 @@
-Venom by Ace Draconis
+Alpha by Ace Draconis
 
 variations:
 -Dark
 -Light
--Dark + Light
--Light + Dark

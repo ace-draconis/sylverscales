@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2016 at 11:42 AM
+-- Generation Time: May 24, 2016 at 06:17 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sylverscales3`
+-- Database: `sylverscales`
 --
 
 -- --------------------------------------------------------
@@ -34,15 +34,17 @@ CREATE TABLE IF NOT EXISTS `banner` (
   `caps` text CHARACTER SET utf8 NOT NULL,
   `enable` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `banner`
 --
 
 INSERT INTO `banner` (`id`, `arrange`, `banner`, `caps`, `enable`) VALUES
-(1, 1, '/attached/image/banner/01.jpg', 'What we do?', 1),
-(2, 2, '/attached/image/banner/03.jpg', 'Sylver Scales CMS', 1);
+(1, 1, '/attached/image/banner/001.jpg', 'Build Futuristic Website In Minutes', 1),
+(2, 2, '/attached/image/banner/002.jpg', 'Now, Everyone Can Become a Web Designer', 1),
+(3, 3, '/attached/image/banner/003.jpg', 'Single Page Responsive Website', 1),
+(4, 4, '/attached/image/banner/004.jpg', 'Simple, Intuitive, Fast and Flexible', 1);
 
 -- --------------------------------------------------------
 
@@ -202,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `module` (
 
 INSERT INTO `module` (`id`, `arrange`, `name`, `url`, `enable`) VALUES
 (1, 1, 'Theme', 'module/theme/theme.php', 1),
-(2, 2, 'Banner', 'module/banner/banner.php ', 1),
+(2, 2, 'Banner', 'module/banner/banner.php', 1),
 (3, 3, 'Social Links', 'module/social/social.php', 1),
 (4, 4, 'Portfolio', 'gallery.php', 1);
 
@@ -275,7 +277,6 @@ INSERT INTO `social` (`id`, `arrange`, `name`, `url`, `target`, `enable`) VALUES
 DROP TABLE IF EXISTS `theme`;
 CREATE TABLE IF NOT EXISTS `theme` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` text COLLATE latin1_general_ci NOT NULL,
   `enable` int(11) NOT NULL,
   `theme` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `vary` text COLLATE latin1_general_ci,
@@ -287,8 +288,8 @@ CREATE TABLE IF NOT EXISTS `theme` (
 -- Dumping data for table `theme`
 --
 
-INSERT INTO `theme` (`id`, `name`, `enable`, `theme`, `vary`, `mode`) VALUES
-(1, 'Alpha', 1, 'alpha', 'light', 'single');
+INSERT INTO `theme` (`id`, `enable`, `theme`, `vary`, `mode`) VALUES
+(1, 0, 'alpha', 'dark', 'horizontal'),
 
 -- --------------------------------------------------------
 
@@ -304,7 +305,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `post` int(11) NOT NULL,
   `enable` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

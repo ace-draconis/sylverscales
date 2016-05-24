@@ -210,7 +210,7 @@
                       if ($vary == "dark") {
                           echo "odd";
                       }
-                      elseif ($vary == "light") {
+                      elseif ($vary == "default") {
                           echo "";
                       }
                       else {
@@ -243,7 +243,7 @@
                       if ($vary == "dark") {
                           echo "odd";
                       }
-                      elseif ($vary == "light") {
+                      elseif ($vary == "default") {
                           echo "";
                       }
                       else {
@@ -329,7 +329,7 @@
           if ($vary == "dark") {
               echo "odd";
           }
-          elseif ($vary == "light") {
+          elseif ($vary == "default") {
               echo "";
           }
           else {
@@ -338,17 +338,16 @@
               }
           }
           echo '"><div class="border"></div>
-<article class="container">';
-          ?>
+<article class="container">
     	<div class="row">
             <div class="span12">
                <div class="sub_header">
                     <h2>Contact Us</h2>
-                    <h5> Our Clients, Our Priority </h5>
+                   <h5> '.$title.' </h5>   
                 </div>
                </div>
-                <div class="span6">
-                      <?php
+                <div class="span6">';
+
                       $query4 = "SELECT * FROM contact WHERE id='1'";
                       $result4 = mysqli_query($con,$query4);
                       $row4 = mysqli_fetch_array($result4,MYSQLI_ASSOC);

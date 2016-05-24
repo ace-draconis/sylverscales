@@ -3,7 +3,9 @@ include ("../../db/connect.php");
 include ("../../functions.php");
 $rev = $_POST['ref'];
 $act = $_POST['act'];
-$theme = $_POST['name'];
+$vary = $_POST['vary'];
+$mode = $_POST['mode'];
+if($mode==""){$mode ='single';}
 $id = $_POST['id'];
 if ($_SESSION['SESS_MEMBER_ID'] == '') {
     header('refresh: 0; url=../../noty.php?mode=error');
@@ -14,7 +16,7 @@ else {
         $name = explode(".",$filename);
         $base = "../../../theme/".$name[0]."/";
         mkdir($base,0777);
-        $dir = $base.basename($_FILES['uploadedfile']['name']);
+       echo $dir = $base.basename($_FILES['uploadedfile']['name']);
         if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'],$dir)) {
             $unzip = $_FILES['uploadedfile']['name'];
             if (is_file($dir)) { //do da UNZIP!!!!
@@ -23,19 +25,22 @@ else {
                 $zip->extract(PCLZIP_OPT_PATH,$base);
                 unlink($dir);
             }
-        }
-        else {
-            echo "There was an error uploading the file, please try again!";
-        }
-        $query = sprintf("INSERT INTO theme (name, enable, theme, vary, mode) VALUES (%s, %s, %s, %s, %s)",
-                GetSQLValueString($con, $theme, "text"),
+             $query = sprintf("INSERT INTO theme (enable, theme, vary, mode) VALUES (%s, %s, %s, %s)",
                 GetSQLValueString($con, 0,"int"),
                 GetSQLValueString($con, $name[0], "text"),
                 GetSQLValueString($con, 'default', "text"),
                 GetSQLValueString($con, 'single', "text"));
+        }
+        else {
+            echo "There was an error uploading the file, please try again!";
+        }
+
     }
     elseif ($act == 'update') {
-        $query = sprintf("UPDATE theme SET vary=%s, mode=%s WHERE id=%s",GetSQLValueString($con,$vary,"text"),GetSQLValueString($con,$mode,"text"),GetSQLValueString($con,$id,"int"));
+        $query = sprintf("UPDATE theme SET vary=%s, mode=%s WHERE id=%s",
+                GetSQLValueString($con,$vary,"text"),
+                GetSQLValueString($con,$mode,"text"),
+                GetSQLValueString($con,$id,"int"));
     }
     else {
         $rev = $_GET['ref'];
@@ -73,6 +78,6 @@ else {
     }
     mysqli_query($con,$query);
     $ref = '../../mods.php?ref='.$rev;
-    header('refresh: 0; url='.$ref);
+  header('refresh: 0; url='.$ref);
 }
 ?>

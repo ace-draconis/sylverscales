@@ -9,9 +9,11 @@ include ("../../functions.php");
     if ($_SESSION['SESS_MEMBER_ID']==''){ header( 'refresh: 0; url=../../noty.php?mode=error');}
     else{
         if($act=='insert'){
-            $query = sprintf("INSERT INTO banner (banner, caps) VALUES (%s, %s)",
+        $query = sprintf("INSERT INTO banner (arrange,banner, caps, enable) VALUES (%s, %s, %s, %s)",
+                  GetSQLValueString($con,0, "int"),
                   GetSQLValueString($con,$banner, "text"),
-                  GetSQLValueString($con,$caps, "text"));
+                  GetSQLValueString($con,$caps, "text"),
+                  GetSQLValueString($con,0, "int"));
         }
         elseif($act=='update'){
             $query = sprintf("UPDATE banner SET banner=%s, caps=%s WHERE id=%s",
@@ -26,6 +28,6 @@ include ("../../functions.php");
         }
         mysqli_query($con, $query);
         $ref = '../../mods.php?ref='.$rev;
-        header( 'refresh: 0; url='.$ref);
+       header( 'refresh: 0; url='.$ref);
     }
 ?>
